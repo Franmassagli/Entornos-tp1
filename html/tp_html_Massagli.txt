@@ -1,0 +1,658 @@
+Práctica 1 HTML : --Franco Massagli --leg:54315 
+
+
+	1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+
+
+	HTML es un lenguaje de marcado de hipertexto, basicamente es un lenguaje para estructurar el contenido de las páginas web, ya sean imagenes, textos, enlaces, etc.Como su nombre lo indica, HTML no es un lenguaje de programación 	sino que es un lenguaje de marcado ya que usa etiquetas para organizar el contenido.HTML fue creado por Tim Berners-Lee en 1991. Desde su creación se vieron las siguientes versiones:
+
+
+	HTML 1.0 (1991).
+	HTML 2.0 (1995). 
+	HTML3.2 (1997)
+	HTML4.01 (1999)
+	XHTML 1.0 (2000)
+	HTML5 (2008-actualidad) Última versión hasta la fecha.
+
+
+	
+	2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos con HTML?
+
+	El W3C recomienda seguir cuatro principios básicos para la creación de documentos HTML accesibles, conocidos como POUR: Perceptible, Operable, Comprehensible y Robust.
+
+	Perceptible: Esto implica proporcionar alternativas textuales para contenido no textual, ejemplo: imágenes.
+	Operable: Significa que los usuarios deben poder utilizar todos los componentes de la interfaz y acceder a la información a través de diferentes métodos de entrada, como el teclado, el mouse, etc.
+	Comprehensible:Esto implica utilizar lenguaje claro y facilitar la navegación y la comprensión del contenido.
+	Robust:Esto significa que el contenido debe seguir siendo accesible a medida que la tecnología avanza.
+
+
+	3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y obsoleto?
+
+	 Un elemento o atributo se considera desaprobado cuando ya no se recomienda su uso y se sugiere una alternativa, pero aún puede ser compatible con los navegadores para mantener la compatibilidad con versiones anteriores, y se 	 considera obsoleto cuando ha sido eliminado de la especificación y no hay garantía de que los navegadores lo sigan admitiendo. 
+
+
+	4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+
+	Document Type Definition (Definición de Tipo de Documento) es una declaración que especifica la versión de HTML y las reglas que definen la estructura y los elementos válidos de un documento. En HTML 4.01, existen tres tipos de 		DTD posibles: 
+
+	Estricto (Strict).
+	Transicional (Transitional). 	
+	De Marcos (Frameset). 
+
+	5. Qué son los metadatos y cómo se especifican en HTML?
+
+	Los metadatos son datos sobre los datos (datos que describen a otros datos), en HTML, los metadatos describen información sobre la propia página web. Estos se especifican dentro de la etiqueta <head> utilizando la etiqueta 	<meta>.
+
+
+	2)
+
+	a)	 <!-- Código controlado el día 12/08/2009 →	
+	
+		Elemento: Es un comentario.
+		Efecto que produce: Ignora una sentencia del código.
+		Etiqueta: <!-- -->  (no lleva atributo)
+			
+
+
+
+	b) 	<div id="bloque1">Contenido del bloque1</div>
+	
+		Ubicación: Va dentro del <body>.
+		Elemento: Div
+		Efecto que produce: Es una especie de contenedor utilizado para contenido.
+		Etiqueta: <div> </div> 
+		Atributos: id="bloque1"
+			
+
+
+	c) 	<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
+	
+		Ubicación: Va dentro del <body>.
+		Elemento: img
+		Efecto que produce: Muestra una imagen (si el src tiene contenido)
+		Etiqueta: <img/>
+		Atributos: alt (indica a que hace referencia la imagen al pasarle el cursor por encima)
+			   id="im1"
+			   width=" " (asigna un ancho especifico a la imagen)
+			   height=" " (asigna una altura especifica a la imagen)
+			   longdes
+
+
+
+
+	d) 	<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+		<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+
+
+
+		Ubicación: Va dentro del <head>.
+		Elemento: meta
+		Efecto que produce: Define metadatos para el navegador o buscador.
+		Etiqueta:<meta>
+		Atributos: alt (indica a que hace referencia la imagen al pasarle el cursor por encima)
+			   lang
+			   name
+			   content
+			   http-equiv
+
+
+
+	e) 	<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+		rel="help">Resumen HTML </a>
+
+		ubicación: Dentro de <body>
+		elemento: a (enlace)
+		efecto: Enlace a otra página.
+		etiqueta: <a>, </a>
+		atributos: `href`, `type`, `hreflang`, `charset`, `rel`
+
+
+
+
+	2.f) 	2.f)
+	<table width="200" summary="Datos correspondientes al ejercicio vencido">
+		<caption align="top"> Título </caption>
+		<tr>
+			<th scope="col">&nbsp;</th>
+			<th scope="col">A</th>
+			<th scope="col">B</th>
+			<th scope="col">C</th>
+		</tr>
+		<tr>
+			<th scope="row">1º</th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th scope="row">2º</th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+
+
+	Seccion: <body>
+	Elemento: table, caption, tr, th, td
+	Efecto que produce: Muestra una tabla con encabezados de columna y fila, y contenido vacío.
+	Etiqueta: <table>, <caption>, <tr>, <th>, <td>
+	Atributos: width, summary, align, scope
+		
+
+
+	3.a)
+		<a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+		<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+		<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+		<a href="#">Click aquí para ir a Google</a>
+		<a href="#arriba">Click aquí para volver arriba</a>
+		<a name="arriba" id="arriba"></a>
+
+
+
+		1) <a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+		2) <a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+		3) <a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+		4) <a href="#">Click aquí para ir a Google</a>
+		5) <a href="#arriba">Click aquí para volver arriba</a>
+		6) <a name="arriba" id="arriba"></a>
+
+	
+		1) Enlace que abre Google en la pestaña actual del usuario.
+		2) Enlace que abre Google en una pestaña aparte.
+		3) Enlace con atributos extra idioma, tipo, etc. 
+		4) Enlace que "no lleva a ningun lado" por el "#" (uso de enlace fictio)
+		5) Enlace que actua como ancla llevando hacía arriba.
+		6) Enlace que define el  "destino" del enlace anterior, actúa como un ancla invisible.                        
+
+
+
+
+
+
+	 	Visualización en el navegador                    
+	 	1)	🔵 Click aquí para ir a Google                                                
+	 	2)	🔵 Click aquí para ir a Google                                     
+	 	3)	🔵 Click aquí para ir a Google                 
+ 		4)	🔵 Click aquí para ir a Google                   
+	 	5)	🔵 Click aquí para volver arriba                                      
+ 		6)	(No se ve nada)                                  
+
+
+
+
+	3.b)
+		1) <p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+		2) <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+		3) <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+		4) <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+
+
+
+		1) Imágen no enlazada, texto si.
+		2) Imágen enlazada (lleva a google), texto sin enlazar.
+		3) Imagen y texto como un solo link que lleva a Google.
+		4) Imagen y texto cada uno como un link a Google por separado.
+		
+
+ 	Visualización                                                                                             
+ 
+  		1) Imagen visible + texto “Click aquí” como enlace 
+		2) Imagen enlazada + texto “Click aquí” sin enlace
+		3) Imagen + texto “Click aquí”, todo como enlace
+		4) Imagen enlazada + texto enlazado separados
+
+
+
+
+	3.c)
+
+	1) <ul>
+		<li>xxx</li>
+		<li>yyy</li>
+		<li>zzz</li>
+	  </ul>
+
+
+
+	2) <ol>
+		<li>xxx</li>
+		<li>yyy</li>
+		<li>zzz</li>
+	  </ol>
+
+
+
+
+	3) <ol>
+		<li>xxx</li>
+	  </ol>
+
+	 <ol>
+		<li value="2">yyy</li>
+	</ol>
+
+	<ol>
+		<li value="3">zzz</li>
+	</ol>
+
+
+
+		1) Lista no ordenada.
+		2) Lista ordenada con numeros.
+		3) Lista ordenada con indice numerico manejado manualmete a tráves del value.
+		4) Representación de lista usando texto con un <blockquote> (no es una lista HTML). El <blockquote> da sangría, y los números se escriben manualmente. 
+
+	
+
+
+Visualización                                                                                             
+ 
+  		1)  .xxx
+		    .yyy   lista no ordenada
+		    .zzz
+
+		2) 1.xxx
+		   2.yyy  lista ordenada (numerada)
+		   3.zzz
+
+		3) 1. xxx
+		   2. yyy
+		   3. zzz
+
+
+		4) 1. xxx
+		   2. yyy
+		   3. zzz
+
+
+
+
+
+
+
+	3d)
+		1)    
+		<table border="1" width="300">
+
+        		<tr>
+           		 	<th>Columna 1</th>
+            			<th>Columna 2</th>
+        		</tr>
+       		 	<tr>
+            			<td>Celda 1</td>
+            			<td>Celda 2</td>
+        		</tr>
+        		<tr>
+            			<td>Celda 3</td>
+            			<td>Celda 4</td>
+        		</tr>
+   		 </table>
+        
+
+		2)
+		<table border="1" width="300">
+			<tr>
+				<td><div align="center"><strong>Columna1</strong></div></td>
+				<td><div align="center"><strong>Columna 2</strong></div></td>
+			</tr>
+			<tr>
+				<td>Celda 1</td>
+				<td>Celda 2</td>
+			</tr>
+			<tr>
+				<td>Celda 3</td>
+				<td>Celda 4</td>
+			</tr>
+		</table>
+
+
+
+
+
+Visualizacion:
+
+		1)  Una tabla de 2 columnas y 3 filas, con los encabezados “Columna 1” y “Columna 2” en negrita y alineados por defecto, cada celda en su interior dice ("celda"+ "nrocelda correspondiente")
+
+
+		2) La misma tabla con títulos “Columna 1” y “Columna 2”, pero los encabezados están dentro de celdas `<td>`, con el texto en negrita y centrado manualmente usando `<div align="center"><strong>
+
+
+
+Explicación:
+  	       1) Se usa la etiqueta <th> para los encabezados, que por defecto se muestran en negrita y centrados. Es la forma semánticamente correcta de definir títulos de columnas.                                
+
+	       2) Se usan <td> comunes con formato manual (negrita y centrado). El resultado visual puede ser similar, pero la estructura HTML es menos accesible. 
+
+
+
+
+	3e) 
+
+		1)
+
+		<table width="200">
+    			<caption>Título</caption>
+    			<tr>
+        			<td bgcolor="#dddddd">&nbsp;</td>
+        			<td bgcolor="#dddddd">&nbsp;</td>
+        			<td bgcolor="#dddddd">&nbsp;</td>
+    			</tr>
+    			<tr>
+        			<td bgcolor="#dddddd">&nbsp;</td>
+        			<td bgcolor="#dddddd"> &nbsp;</td>
+        			<td bgcolor="#dddddd">&nbsp;</td>
+    			</tr>
+		</table>
+
+
+
+
+
+| Visualización    
+
+
+		1)  Una tabla de 3 columnas con título en la parte superior. El texto del título aparece solo (no centrado ni abarcando todas las columnas). Celdas grises vacías 	
+
+
+		2) Una tabla similar de 3 columnas, pero el “título” está dentro de la primera fila de celdas y ocupa las tres columnas (`colspan="3"`), con el texto centrado. Celdas grises vacías como la anterior.
+	
+Explicación:
+
+		1) Usa la etiqueta <caption> para el título de la tabla, que se muestra arriba. Cada celda tiene color de fondo definido (`bgcolor="#dddddd"`), y hay tres columnas definidas. Es la forma correcta de titular una tabla. 
+
+		2)En lugar de usar <caption>, el título se pone en la primera fila de datos, usando `colspan="3"` para que ocupe todo el ancho y `align="center"` para centrarlo. Es **menos semántico**, pero visualmente puede ser más flexible.                 
+
+
+
+
+	3f) 
+
+
+		1) 
+ 
+
+		<table width="200">
+			<tr>
+				<td colspan="3"><div align="center">Título</div></td>
+			</tr>
+			<tr>
+				<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+				<td bgcolor="#dddddd">&nbsp;</td>
+				<td bgcolor="#dddddd">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="#dddddd">&nbsp;</td>
+				<td bgcolor="#dddddd">&nbsp;</td>
+			</tr>
+		</table>
+
+		2) 
+
+
+
+		<table width="200">
+			<tr>
+				<td colspan="3"><div align="center">Título</div></td>
+			</tr>
+			<tr>
+				<td colspan="2" bgcolor="#dddddd">&nbsp;</td>
+				<td bgcolor="#dddddd">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="#dddddd">&nbsp;</td>
+				<td bgcolor="#dddddd">&nbsp;</td>
+				<td bgcolor="#dddddd">&nbsp;</td>
+			</tr>
+		</table>
+
+
+Visualización:
+
+		1) Una tabla con un título centrado en la parte superior. En la segunda fila, la primera celda ocupa dos filas (rowspan="2"), y las demás se reparten normalmente. Las celdas están coloreadas de gris claro.
+
+		2) Misma tabla con título centrado, pero en la segunda fila la primera celda ocupa dos columnas(colspan="2"), desplazando el diseño horizontalmente. La distribución ya no queda alineada verticalmente como en el			           caso anterior.
+
+	3g)
+
+		1)
+
+		<table width="200" border="1">
+			<tr>
+				<td colspan="3"><div align="center">Título</div></td>
+			</tr>
+			<tr>
+				<td colspan="2"rowspan="2">&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="50%">&nbsp;</td>
+			</tr>
+		</table>
+			
+																												
+		2) 	
+
+		<table width="200" border="1" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2"><div align="center">Título</div></td>
+			</tr>
+			<tr>
+				<td rowspan="2">&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="50%">&nbsp;</td>
+			</tr>
+		</table>
+												
+
+
+Visualización y explicación:
+
+		1)  Tabla con título centrado en la parte superior. En la segunda fila, una celda combina 2 columnas y 2 filas (colspan="2"` y `rowspan="2"). A su derecha hay una celda común. La fila siguiente sólo tiene una celda 		    alineada con la anterior. Todas las celdas tienen borde.   En este diseño se combina `colspan="2"` y `rowspan="2"` para que una sola celda se extienda **horizontal y verticalmente**, ocupando 4 espacios de la grilla 		    total.
+
+
+		2) Igual estructura general, pero el título solo ocupa 2 columnas (colspan="2"), y la tabla tiene cellpadding="0" y cellspacing="0" para eliminar los espacios interiores y entre celdas. La celda con rowspan="2" 			           aparece debajo del título. En este caso se ajustan los espacios entre las celdas para un diseño más compacto. La celda combinada verticalmente aparece en una ubicación diferente. Las combinaciones de cellpadding y 	           cellspacing afectan cómo se ve el contenido, sin cambiar la lógica estructural. 
+
+
+	3h) 
+
+		1) 
+	<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+		<fieldset>
+			<legend>LOGIN</legend>
+			Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+			Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+		</fieldset>
+		<input type="submit" id="boton1" name="boton1" value="Enviar" />
+	</form>
+
+
+
+		2) 
+	<form id="form2" name="form2" action="" method="get" target="_blank">
+		LOGIN<br />
+		<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+		<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+		<input type="submit" id="boton2" name="boton2" value="Enviar" />
+	</form>
+
+		3)
+		<form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="post" target="_blank">
+			<fieldset>
+				<legend>LOGIN</legend>
+				Usuario: <input type="text" id="usu3" name="usu3" /><br />
+				Clave: <input type="password" id="clave3" name="clave3" />
+			</fieldset>
+			<input type="reset" id="boton3" name="boton3" value="Enviar" />
+		</form>
+
+
+
+
+Visualización:
+
+		1)  Un formulario con el título “LOGIN”, campos de texto prellenados con “xxx”, y un botón que dice “Enviar”
+		2)  Similar visualmente al Form 1, pero los campos no están prellenados. El botón también dice “Enviar”
+		3)  Visualmente similar, pero el botón aparece vacío porque no se asignó un valor al botón. 	
+
+
+
+
+Explicación:
+
+		1) Envia datos a procesar.php usando el método POST, lo que es más seguro (no visible en URL). Se abre en una nueva pestaña (`target="_blank"`)
+		2) Usa el método GET, entonces los datos se envían por la URL. No se agrupan los campos con <fieldset> y <legend>. También abre en nueva pestaña.                                                        
+		3) Intenta enviar el formulario como si fuera un correo electrónico con mailto:, lo que depende del cliente de correo del usuario. El method="post"mal cerrado "post". También usa reset en lugar de submit, esto borra los 		   datos en vez de enviarlos. 
+
+
+
+	3i)
+		1)
+ 	<label>Botón 1
+		<button type="button" name="boton1" id="boton1">
+		<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+	<b>CLICK AQUÍ</b></button></label>
+
+
+
+
+		2) 
+		<label>Botón 2
+			<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+		</label>
+
+
+
+Visualización:
+
+		1)  Un botón que muestra una imagen (logo.jpg) y debajo un texto en negrita que dice "CLICK AQUÍ".
+		2)  Un botón gris con texto que dice “CLICK AQUÍ”.   
+	
+
+
+Explicación:
+
+		1) Usa <button> que permite "contenido enriquecido" (imagen + texto + etiquetas HTML)
+		2) Usa <input type="button">, que es más limitado solo permite usar el "value"
+
+
+
+
+
+3.j
+		1) 
+		<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+		<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+
+		2) 
+		<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+		<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+
+Visualización:
+
+
+		1)  Dos botones circulares, solo se puede seleccionar uno a la vez.
+		2)  También dos botones circulares, pero se pueden seleccionar ambos al mismo tiempo.
+
+
+
+Explicación:
+
+		1)  Ambos inputs comparten el mismo name, lo que los agrupa como una única selección. Solicita “sí/no”, “hombre/mujer”, etc.                
+		2)  Como tienen nombres distintos, son considerados grupos separados, por eso permiten seleccionar ambos. 
+
+
+	3k) 
+
+
+
+		1)
+
+		<select name="lista">
+			<optgroup label="Caso 1">
+			<option>Mayo</option>
+			<option>Junio</option>
+			</optgroup>
+			<optgroup label="Caso 2">
+			<option>Mayo</option>
+			<option>Junio</option>
+			</optgroup>
+		</select>
+
+		2) 
+
+
+		<select name="lista[]" multiple="multiple">
+			<optgroup label=" Caso 1">
+			<option>Mayo</option>
+			<option>Junio</option>
+			</optgroup>
+			<optgroup label=" Caso 2">
+			<option>Mayo</option>
+			<option>Junio</option>
+			</optgroup>
+		</select>
+
+
+
+
+Visualización:
+
+
+		1)  Menú desplegable clásico, donde solo se puede elegir una opción. 
+		2)  Lista desplegable con posibilidad de seleccionar varias opciones 
+
+
+
+Explicación:
+
+		1)  Agrupado por "Caso 1" y "Caso 2". name="lista" y sin atributo multiple, por lo tanto una sola selección posible.             
+		2)  name="lista[]" indica que se enviarán múltiples valores, y el atributo multiple permite seleccionar más de una opción. El optgroup para categorizar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
